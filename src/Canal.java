@@ -1,6 +1,6 @@
 /**
  *
- * @author andre
+ * @author andres rokas
  */
 public class Canal {
     private String nombreCanal, descripcion;
