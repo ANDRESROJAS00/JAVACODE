@@ -8,43 +8,40 @@ package listaempleados;
 public class TestEmpresa {
     public static void main(String[] args) {
         
-        Puesto puesto1 = new Puesto("Junior", 1);
-        Puesto puesto2 = new Puesto("Senior", 22);
-        
-        Empleado empleado1 = new Empleado(5, 20, "Andres", "1-1", 'm', puesto1);
-        Empleado empleado2 = new Empleado(11, 35, "CATA", "2-2", 'F', puesto2);
         
         
-        Empresa empresa = new Empresa();
-        
-        
-        
-        
-        if (empresa.buscarEmpleado(empleado1.getRut()) == false) {
-            empresa.ingresarEmpleado(empleado1);
-            System.out.println("El empleado " + empleado1.getNombreEmpleado() + " fue agregado");
-            
-        }else{
-            System.out.println("El empleado ya existe");
-        }
-        
-        
-        
-        if (empresa.buscarEmpleado(empleado2.getRut()) == false) {
-            empresa.ingresarEmpleado(empleado2);
-            System.out.println("Empleado " + empleado2.getNombreEmpleado() + " fue ingresado");
+       Puesto puesto1 = new Puesto("Junior", 12300);
+       Puesto puesto2 = new Puesto("Senior", 12340);
+       
+       Empleado empleado1 = new Empleado(3, 20, "Pedro", "11-11", 'M', puesto2);
+       Empleado empleado2 = new Empleado(5, 30, "Lana", "22-22", 'F', puesto1);
+       
+       Empresa empresa = new Empresa();
+       
+       
+        if (empresa.encontrarEmpleado(empleado1.getRut()) == false) {
+            empresa.agregarEmpleado(empleado1);
+            System.out.println("El empleado " + empleado1.getNombreEmpleado() + " fue agregado con exito");
             
         } else {
-            System.out.println("El empleado ya existe");
+            System.out.println("El empleado ya fue agregado");
+        }
+           
+       
+        if (empresa.encontrarEmpleado(empleado2.getRut()) == false) {
+            empresa.agregarEmpleado(empleado2);
+            System.out.println("El empleado " + empleado2.getNombreEmpleado() + " fue agregado");
+            
+        } else {
+            System.out.println("El empleado ya fue agregado");
         }
         
         
-        empresa.listaEmpleados();
+        
+        empresa.listarEmpleado();
+        
         empresa.eliminarEmpleado(empleado1.getRut());
-        empresa.listaEmpleados();
         
-        
-       
         
         
     }
