@@ -26,12 +26,15 @@ public class Main {
         
         Evento evento5 = new Evento(0, 500, "2019-9-20", "1000", "1200", "Concepcion", "cumpleaños", 100000, true);
         
+        Evento evento6 = new Evento(0, 600, "2018-9-20", "0900", "1100", "Valdivia", "cumpleaños", 200000, true);
+        
         
         listaEvento.agregarEvento(evento1);
         listaEvento.agregarEvento(evento2);
         listaEvento.agregarEvento(evento3);
         listaEvento.agregarEvento(evento4);
         listaEvento.agregarEvento(evento5);
+        listaEvento.agregarEvento(evento6);
         
         
         listaEvento.listarEventosPorFecha();
