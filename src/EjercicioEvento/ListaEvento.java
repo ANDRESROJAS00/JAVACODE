@@ -17,8 +17,18 @@ public class ListaEvento {
    
     
     //Metodo para agregar un evento a la lista
-    public void agregarEvento(Evento evento){
-        listaEvento.add(evento);
+    public boolean agregarEvento(Evento evento){
+        String tipo = evento.getTipoEvento();
+        
+        if (tipo.equalsIgnoreCase("cumpleaños") || tipo.equalsIgnoreCase("cena") || tipo.equalsIgnoreCase("matrimonio") || tipo.equalsIgnoreCase("fiesta")) {
+            return listaEvento.add(evento);
+            
+        } else {
+            System.out.println(evento + "\nIngreso un tipo de evento incorrecto");
+            System.out.println("Eventos disponibles: 'Matrimonio', 'Cena', 'Fiesta', 'Cumpleaños'\n");
+            return false;
+        }
+        
     }
     
     
@@ -82,16 +92,16 @@ public class ListaEvento {
         //Contar eventos por tipo
         for (Evento evento : listaEvento) {
             switch(evento.getTipoEvento()){
-                case "Matrimonio":
+                case "matrimonio":
                     matrimonio++;
                     break;
-                case "Cena":
+                case "cena":
                     cena++;
                     break;
-                case "Fiesta":
+                case "fiesta":
                     fiesta++;
                     break;
-                case "Cumpleaños":
+                case "cumpleaños":
                     cumpleaños++;
                     break;                        
             }
@@ -105,15 +115,15 @@ public class ListaEvento {
             maxSolicitudes = cumpleaños;
         }
         if (matrimonio > maxSolicitudes){
-            tipoMasSolicitado = "";
+            tipoMasSolicitado = "matrimonio";
             maxSolicitudes = matrimonio;
         }
         if (cena > maxSolicitudes){
-            tipoMasSolicitado = "";
+            tipoMasSolicitado = "cena";
             maxSolicitudes = cena;
         }
         if (fiesta > maxSolicitudes){
-            tipoMasSolicitado = "";
+            tipoMasSolicitado = "fiesta";
             maxSolicitudes = fiesta;
         }
         

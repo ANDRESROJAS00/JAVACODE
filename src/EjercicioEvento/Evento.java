@@ -77,7 +77,7 @@ public class Evento {
     }
 
     public String getTipoEvento() {
-        return tipoEvento.toLowerCase();
+        return tipoEvento;
     }
 
     public void setTipoEvento(String tipoEvento) {
