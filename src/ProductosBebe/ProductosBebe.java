@@ -7,7 +7,7 @@ package ProductosBebe;
  */
 public class ProductosBebe {
     public static void main(String[] args) {
-        
+        RegistroProductos res = new RegistroProductos();
         Alimentos alimento;
         Perfumeria perfumeria;
         
@@ -26,6 +26,16 @@ public class ProductosBebe {
         
         System.out.println("***************");
         
+        
+        
+        
+        
+        res.agregarProductos(alimento);
+        res.agregarProductos(perfumeria);
+        res.verificarProducto(1210);
+        
+        
+        res.listar();
         
     }
     

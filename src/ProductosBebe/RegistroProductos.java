@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ProductosBebe;
 
 import java.util.ArrayList;
@@ -23,6 +19,7 @@ public class RegistroProductos {
     public void agregarProductos(Productos nuevoProducto){
         if (this.verificarProducto(nuevoProducto.getCodigo()) == false) {
             productos.add(nuevoProducto);
+            
             
         } else {
             System.out.println("Producto existe");
